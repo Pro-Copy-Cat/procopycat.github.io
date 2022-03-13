@@ -1,13 +1,4 @@
 /*-----------------------------------------------------------
-    Theme Name: Doob | Simple Agency HTML Template
-    Description: Simple Agency HTML Template
-    Author: Graphberry
-    Author URI: https://www.graphberry.com/
-    Version: 1.0
--------------------------------------------------------------*/
-
-
-/*-----------------------------------------------------------
     1  General Styles
     2  Typography
     3  Buttons & Links 
@@ -18,7 +9,8 @@
     8  Blog
     9  Contact
     10 Footer
-    11 Responsive 
+    11 Back to Top
+    12 Responsive 
 -------------------------------------------------------------*/
 
 
@@ -149,6 +141,19 @@ p {
   font-weight: 600;
   color: #fecb00;
 }
+input[type=submit] {
+  background-color: #fecb00;
+  border:2px solid #fecb00;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  color: #000000;
+  padding: 17px 35px;
+  font-size: 1.0rem;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(255,57,70,0.15);
+  -moz-box-shadow: 0px 4px 5px 0px rgba(255,57,70,0.15);
+  box-shadow: 0px 4px 5px 0px rgba(255,57,70,0.15);
+}
 .contact-btn i {
   font-size: 2rem;
   width: 100px;
@@ -159,7 +164,7 @@ p {
   background-color: #000000;
   border:2px solid #000000;
   color: #fecb00;
-  padding: 17px 35px;
+  padding: 17px 58px;
   font-size: 1.0rem;
   border-radius: 30px;
   -webkit-box-shadow: 0px 4px 5px 0px rgba(255,57,70,0.15);
@@ -170,7 +175,7 @@ p {
   background-color: #fecb00;
   border:2px solid #fecb00;
   color: #000000;
-  padding: 17px 35px;
+  padding: 17px 58px;
   font-size: 1.0rem;
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -436,7 +441,7 @@ p {
   background-color: #fff;
   min-height: 330px;
   max-width: 370px;
-  padding: 50px 25px;
+  padding: 25px 25px;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(28,31,33,0.15);
   -moz-box-shadow: 0px 3px 7px 0px rgba(28,31,33,0.15);
   box-shadow: 0px 3px 7px 0px rgba(28,31,33,0.15);
@@ -507,8 +512,12 @@ p {
   9. Contact
 -------------------------------------------------------------*/
 .contact {
-  max-height: 550px;
+  max-height: 1300px;
 }
+.contact-map iframe {
+  width: 100%;
+  height: 550px;
+  padding-bottom: 40px; }
 .email input {
   width: 100%;
   height: 60px;
@@ -594,8 +603,35 @@ footer h6 {
   color: #fecb00;
   transition: all 0.3s ease;
 }
+
+
 /*-----------------------------------------------------------
-  11. Responsive
+  11. Back to top
+-------------------------------------------------------------*/
+.back-to-top {
+  font-size: 20px;
+  color: #000000;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 5px;
+  background-color: #fecb00;
+  text-align: center;
+  z-index: 99;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
+  .back-to-top:hover {
+    color: #000000;
+    background-color: #fecb00; }
+
+/*-----------------------------------------------------------
+  12. Responsive
 -------------------------------------------------------------*/
 @media (max-width: 1700px) {
   .hero-btns {
@@ -672,7 +708,6 @@ footer h6 {
   }
   .contact-btn {
     margin-top: 40px;
-    /* display: none; */
   }
   .hero-btns {
     margin-bottom: 70px;
@@ -693,7 +728,6 @@ footer h6 {
     text-align: center;
   }
   .blog-box {
-    /* min-height: 430px; */
     margin: 0 auto;
     margin-bottom: 25px;
   }
@@ -714,6 +748,8 @@ footer h6 {
     font-size: 1rem;
     padding: 20px 5px;
   }
+  .contact-map iframe {
+    height: 350px; } 
 }
 
 @media (max-width: 575px) {
@@ -746,22 +782,25 @@ footer h6 {
     font-size: 0.8rem;
     display: block;
     width: 70%;
-    margin: 0 auto;
+    margin: 20px auto;
   }
   .hero-btns a:last-child {
     font-size: 0.8rem;
     display: block;
     width: 70%;
-    margin: 0 auto;
+    margin: 20px auto;
   }
   footer h3{
     line-height: 2.6rem;
   }
   .contact-nav li {
     display: block;
+    padding: 5px;
   }
   .social li {
     display: block;
   }
+  .contact-btn {
+    margin-top: 20px;
+  }
 }
-
